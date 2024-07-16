@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>Edit Stadium</title>
+</head>
+<body>
+    <h1>Edit <%= stadium.name %></h1>
+    <form action="/stadiums/<%= stadium._id %>?_method=PUT" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" name="name" value="<%= stadium.name %>" />
+
+        <label for="team">Team:</label>
+        <input type="text" name="team" value="<%= stadium.team %>" />
+
+        <label for="location">Location:</label>
+        <input type="text" name="location" value="<%= stadium.location %>" />
+
+        <label for="yearBuilt">Year Built:</label>
+        <input type="number" name="yearBuilt" value="<%= stadium.yearBuilt %>" />
+
+        <label for="cost">Cost:</label>
+        <input type="number" name="cost" value="<%= stadium.cost %>" />
+        
+        <label for="seats">Seats:</label>
+        <input type="number" name="seats" value="<%= stadium.seats %>" />
+    
+        <label for="isIndoor">Indoor: </label>
+        <input type="checkbox" name="isIndoor" <% if (stadium.isIndoor) { %>checked<% } %> />
+    
+        <button type="submit">Update Stadium</button>
+    </form>
+</body>
+</html>

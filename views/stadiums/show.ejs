@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title><%= stadium.name %></title>
+</head>
+<body>
+    <h1><%= stadium.name %></h1>
+    <div class="showinfo">
+        <p2><%= stadium.team %></p2>
+        <p3><%= stadium.location %></p3>
+        <p4>
+            Year built: <%= stadium.yearBuilt %><br>
+            Cost: $<%= stadium.cost %><br>
+            Seats: <%= stadium.seats %><br>
+            <%= stadium.isIndoor %><br>
+        </p4>
+    </div>
+    <form action="/stadiums/<%= stadium._id %>?_method=DELETE" method="POST">
+        <button type="submit">Delete <%= stadium.name %></button>
+    </form>
+    <button><a href="/stadiums/<%= stadium._id %>/edit">Edit <%= stadium.name %></a></button>
+    <a href="index">Back to Stadiums</a>
+</body>
+</html>

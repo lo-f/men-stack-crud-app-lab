@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>Create a Stadium</title>
+</head>
+<body>
+    <h1>Add a Stadium</h1>
+    <form action="/stadiums" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" />
+
+        <label for="team">Team:</label>
+        <input type="text" name="team" id="team" />
+
+        <label for="location">Location:</label>
+        <input type="text" name="location" id="location" />
+
+        <label for="yearBuilt">Year Built:</label>
+        <input type="number" name="yearBuilt" id="yearBuilt" />
+
+        <label for="cost">Cost:</label>
+        <input type="number" name="cost" id="cost" />
+        
+        <label for="seats">Seats:</label>
+        <input type="number" name="seats" id="seats" />
+    
+        <label for="isIndoor">Indoor: </label>
+        <input type="checkbox" name="isIndoor" id="isIndoor" />
+    
+        <button type="submit">Add Stadium</button>
+    </form>
+    <a href="index">Back to Stadiums</a>
+</body>
+</html>

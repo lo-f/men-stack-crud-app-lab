@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>Stadium Index</title>
+</head>
+<body>
+    <h1>All Stadiums</h1>
+    <a href="/">Home</a>
+    <a href="new">New Stadium</a>
+    <ul>
+        <% stadiums.forEach(stadium => { %>
+            <li>
+                <a href="/stadiums/<%= stadium._id %>"> <%= stadium.name %> </a>
+            </li>
+        <% }); %>
+    </ul>
+</body>
+</html>
