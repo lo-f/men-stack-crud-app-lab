@@ -1,2 +1,2 @@
 .env
-MONGODB_URI=mongodb+srv://lofrankyl:Canon50@student-cluster.ehlenwr.mongodb.net/fruits?retryWrites=true&w=majority&appName=student-cluster
+node_modules
